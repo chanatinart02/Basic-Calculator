@@ -1,0 +1,76 @@
+/*  CSS reset or normalization technique.  */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: #b89f98;
+}
+
+h1 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 30px;
+  color: #3a1c13;
+}
+
+.calculator {
+  background-color: #eff0f3;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  border: solid 1px #cac9c9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+}
+
+/* Display */
+#result {
+  width: 100%;
+  padding: 10px;
+  font-size: 24px;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3) inset;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px;
+  font-size: 24px;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: rgb(161, 137, 159);
+}
+
+.clear {
+  background-color: rgb(245, 40, 50);
+  color: white;
+}
+
+.operator {
+  background-color: #ff8e3c;
+  color: #0d0d0d;
+}
+
+.delete {
+  background-color: #eb503c;
+  color: #f8f5f2;
+}
+
+.equals {
+  background-color: #00473e;
+  color: #f8f5f2;
+}
