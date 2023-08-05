@@ -73,4 +73,5 @@ button:hover {
 .equals {
   background-color: #00473e;
   color: #f8f5f2;
+  grid-row: span 3;
 }
