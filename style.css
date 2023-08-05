@@ -76,15 +76,6 @@ button:hover {
   grid-row: span 3;
 }
 
-/* footer {
-  text-align: center;
-  gap: 10px;
-  width: 100%;
-  padding: 10px;
-  font-size: 20px;
-  color: #7a4069;
-} */
-
 footer {
   position: absolute;
   bottom: 0;
