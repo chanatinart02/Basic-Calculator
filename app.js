@@ -2,28 +2,41 @@ const buttons = document.querySelectorAll("button"); // Select all button elemen
 
 const display = document.getElementById("result"); // Get the display element where the result will be shown
 
-// Loop through each button and add a click event listener
-for (let i = 0; i < buttons.length; i++) {
-  buttons[i].addEventListener("click", () => {
-    // Get the text content of the clicked button
-    const buttonValue = buttons[i].textContent;
-    if (buttonValue === "C") {
-      clearResult();
-    } else if (buttonValue === "=") {
-      calculateResult();
-    } else if (buttonValue === "DEL") {
-      removeNumber();
-    } else if (buttonValue === "x") {
-      // Handle multiplication
-      appendValue("*"); // Replace "x" with "*"
-    } else if (buttonValue === "÷") {
-      // Handle division
-      appendValue("/"); // Replace "÷" with "/"
-    } else {
-      // Call function to append the clicked value to the display
-      appendValue(buttonValue);
-    }
-  });
+// Attach a click event listener to each button
+buttons.forEach((button) => {
+  button.addEventListener("click", () => handleButtonClick(button.textContent));
+});
+
+// Attach a keydown event listener to the entire document
+document.addEventListener("keydown", (event) => handleKeyDown(event.key));
+
+function handleButtonClick(buttonValue) {
+  if (buttonValue === "C") {
+    clearResult();
+  } else if (buttonValue === "=") {
+    calculateResult();
+  } else if (buttonValue === "DEL") {
+    removeNumber();
+  } else if (buttonValue === "x") {
+    // Handle multiplication
+    appendValue("*"); // Replace "x" with "*"
+  } else if (buttonValue === "÷") {
+    // Handle division
+    appendValue("/"); // Replace "÷" with "/"
+  } else {
+    // Call function to append the clicked value to the display
+    appendValue(buttonValue);
+  }
+}
+
+function handleKeyDown(key) {
+  if (key === "Enter") {
+    calculateResult();
+  } else if (key === "Backspace") {
+    removeNumber();
+  } else if (key.match(/[0-9x÷]/)) {
+    handleButtonClick(key);
+  }
 }
 
 function clearResult() {
