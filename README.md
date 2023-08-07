@@ -9,6 +9,12 @@ A simple calculator web application that allows users to perform basic arithmeti
 - **Keyboard Support:** Use the keyboard to input numbers and operators, as well as perform calculations.
 - **Responsive Design:** The app is designed to be responsive and works well on various screen sizes.
 
+  
+## Screenshots
+
+![image](https://github.com/chanatinart02/basic-calculator/assets/125489141/7a29b7d6-374a-4a2f-9c91-1872980fac95)
+
+
 ## Technologies Used
 
 - HTML5
